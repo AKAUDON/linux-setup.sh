@@ -166,7 +166,6 @@ add_public_key() {
     # 检查公钥格式
     if [[ ! "$public_key" =~ ^ssh-rsa[[:space:]]+[A-Za-z0-9+/]+[=]{0,3}(\s*.+)? ]]; then
         echo "无效的公钥格式。"
-        return 1
     fi
 
     # 备份原始authorized_keys文件
